@@ -1,71 +1,138 @@
-// components/ContactForm.jsx
 "use client";
+
 import { useState } from "react";
+import ScrollReveal from "./ScrollReveal";
+import SectionHeader from "./SectionHeader";
 
 export default function ContactForm() {
   const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [ok, setOk] = useState(null);
+  const [status, setStatus] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   async function handleSubmit(e) {
     e.preventDefault();
-    setOk(null);
+    setStatus(null);
+    setLoading(true);
 
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, email, message }),
-    });
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, phone, email, message }),
+      });
 
-    if (res.ok) {
-      setOk(true);
-      setName("");
-      setEmail("");
-      setMessage("");
-    } else {
-      setOk(false);
+      if (res.ok) {
+        setStatus("success");
+        setName("");
+        setPhone("");
+        setEmail("");
+        setMessage("");
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    } finally {
+      setLoading(false);
     }
   }
 
   return (
-    <div className="max-w-2xl mx-auto" id="contact">
-      <h2 className="text-2xl font-bold text-center">Imate pitanje? Pišite nam</h2>
+    <section id="contact" className="section-padding">
+      <div className="max-w-2xl mx-auto px-6">
+        <ScrollReveal>
+          <SectionHeader
+            title="Imate pitanje? Pišite nam"
+            description="Tu smo da odgovorimo na sva vaša pitanja o 360 video booth usluzi."
+          />
+        </ScrollReveal>
 
-      <form onSubmit={handleSubmit} className="mt-6 grid gap-4">
-        <input
-          required
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          placeholder="Vaše ime"
-          className="w-full rounded-md border px-4 py-2"
-        />
-        <input
-          required
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="Email"
-          type="email"
-          className="w-full rounded-md border px-4 py-2"
-        />
-        <textarea
-          required
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          rows={5}
-          placeholder="Poruka"
-          className="w-full rounded-md border px-4 py-2"
-        />
+        <ScrollReveal>
+          <form
+            onSubmit={handleSubmit}
+            className="border border-[#D4AF37]/20 bg-white p-8 md:p-10 space-y-5"
+          >
+            <div>
+              <label className="block text-[0.9375rem] font-semibold text-[#111111]/80 mb-1.5">
+                Ime *
+              </label>
+              <input
+                required
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                className="input-premium"
+                placeholder="Vaše ime"
+              />
+            </div>
 
-        <div className="flex items-center gap-4">
-          <button className="rounded-md bg-amber-600 px-5 py-2 text-white font-semibold hover:bg-amber-700">
-            Pošalji
-          </button>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label className="block text-[0.9375rem] font-semibold text-[#111111]/80 mb-1.5">
+                  Telefon *
+                </label>
+                <input
+                  required
+                  type="tel"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                  className="input-premium"
+                  placeholder="+381 6X XXX XXXX"
+                />
+              </div>
 
-          {ok === true && <span className="text-green-600">Hvala — poslaćemo odgovor uskoro.</span>}
-          {ok === false && <span className="text-red-600">Došlo je do greške. Pokušajte ponovo.</span>}
-        </div>
-      </form>
-    </div>
+              <div>
+                <label className="block text-[0.9375rem] font-semibold text-[#111111]/80 mb-1.5">
+                  E-mail *
+                </label>
+                <input
+                  required
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="input-premium"
+                  placeholder="vas@email.com"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label className="block text-[0.9375rem] font-semibold text-[#111111]/80 mb-1.5">
+                Poruka *
+              </label>
+              <textarea
+                required
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                rows={5}
+                className="input-premium resize-none"
+                placeholder="Vaša poruka..."
+              />
+            </div>
+
+            <button
+              type="submit"
+              disabled={loading}
+              className="btn-primary w-full !py-4 !text-base disabled:opacity-60 disabled:cursor-not-allowed"
+            >
+              {loading ? "Slanje..." : "Pošalji Poruku"}
+            </button>
+
+            {status === "success" && (
+              <div className="rounded-xl bg-green-50 border border-green-200 p-4 text-center text-green-800 text-sm">
+                Hvala na poruci! Odgovorićemo vam u najkraćem roku.
+              </div>
+            )}
+            {status === "error" && (
+              <div className="rounded-xl bg-red-50 border border-red-200 p-4 text-center text-red-800 text-sm">
+                Došlo je do greške. Molimo pokušajte ponovo.
+              </div>
+            )}
+          </form>
+        </ScrollReveal>
+      </div>
+    </section>
   );
 }

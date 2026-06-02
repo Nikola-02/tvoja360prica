@@ -1,8 +1,9 @@
-// app/page.tsx
 import Hero from "../../components/Hero";
+import SetupGallery from "../../components/SetupGallery";
 import About from "../../components/About";
 import WhatYouNeed from "../../components/WhatYouNeed";
 import Gallery from "../../components/Gallery";
+import Pricing from "../../components/Pricing";
 import Booking from "../../components/Booking";
 import ContactForm from "../../components/ContactForm";
 import Footer from "../../components/Footer";
@@ -11,26 +12,13 @@ export default function Page() {
   return (
     <>
       <Hero />
-      <section className="py-16">
-        <About />
-      </section>
-
-      <section className="py-16">
-        <Gallery />
-      </section>
-
-      <section className="py-16">
-        <WhatYouNeed />
-      </section>
-
-      <section className="py-16">
-        <Booking />
-      </section>
-
-      <section className="py-16">
-        <ContactForm/>
-      </section>
-
+      <SetupGallery />
+      <About />
+      <Gallery />
+      <WhatYouNeed />
+      <Pricing />
+      <Booking />
+      <ContactForm />
       <Footer />
     </>
   );

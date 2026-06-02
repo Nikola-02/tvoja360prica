@@ -1,28 +1,62 @@
-// components/Gallery.tsx
+import ScrollReveal from "./ScrollReveal";
+import SectionHeader from "./SectionHeader";
+
+const videos = [
+  {
+    src: "/videos/sample1.mp4",
+    label: "Venčanje — 360 video iskustvo",
+  },
+  {
+    src: "/videos/sample2.mp4",
+    label: "Rođendan — video booth Srbija",
+  },
+  {
+    src: "/videos/sample3.mp4",
+    label: "Korporativni događaj — 360 snimanje",
+  },
+];
+
 export default function Gallery() {
-    const videos = ["/videos/sample1.mp4", "/videos/sample2.mp4", "/videos/sample3.mp4"];
-  
-    return (
-      <div id="gallery" className="max-w-4xl mx-auto">
-        <h2 className="text-2xl font-bold text-center">Pogledajte kako izgleda</h2>
-        <p className="text-center text-slate-600 mt-2">
-          Kratki izveštaji i primeri sa prethodnih događaja.
-        </p>
-  
-        <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6">
-          {videos.map((src) => (
-            <div key={src} className="rounded-lg overflow-hidden shadow">
-              <video
-                src={src}
-                className="w-full h-64 object-cover"
-                controls
-                playsInline
-                preload="metadata"
-              />
-            </div>
-          ))}
-        </div>
+  return (
+    <section id="gallery" className="section-padding">
+      <div className="max-w-6xl mx-auto px-6">
+        <ScrollReveal>
+          <SectionHeader
+            title="Pogledajte magiju u pokretu"
+            description="Pravi snimci sa venčanja, rođendana i proslava širom Srbije. Gosti odlaze sa video uspomenom u ruci — odmah nakon snimanja."
+          />
+        </ScrollReveal>
+
+        <ScrollReveal stagger>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            {videos.map((video) => (
+              <div key={video.src} className="group">
+                <div className="overflow-hidden border border-[#D4AF37]/20">
+                  <video
+                    src={video.src}
+                    className="w-full aspect-[9/16] md:aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                    controls
+                    playsInline
+                    preload="metadata"
+                    aria-label={video.label}
+                  />
+                </div>
+                <p className="mt-3 text-muted text-center">
+                  {video.label}
+                </p>
+              </div>
+            ))}
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal>
+          <div className="mt-14 text-center">
+            <a href="#booking" className="btn-primary">
+              Želim ovo na mom događaju
+            </a>
+          </div>
+        </ScrollReveal>
       </div>
-    );
-  }
-  
+    </section>
+  );
+}

@@ -1,26 +1,25 @@
-// app/api/contact/route.ts
 import { NextResponse } from "next/server";
+import { sendEmail } from "../../../../lib/sendEmail";
+import { contactOwnerEmail } from "../../../../lib/emailTemplates";
 
 export async function POST(request) {
   try {
     const body = await request.json();
-    const { name, email, message } = body;
+    const { name, phone, email, message } = body;
 
-    if (!name || !email || !message) {
-      return NextResponse.json({ error: "Missing fields" }, { status: 400 });
+    if (!name || !phone || !email || !message) {
+      return NextResponse.json({ error: "Nedostaju obavezna polja" }, { status: 400 });
     }
 
-    // OPTIONAL: send to Supabase or email provider
-    // if you want to store contact requests in Supabase, uncomment below and configure lib/supabaseClient
-    /*
-    import { supabase } from "@/lib/supabaseClient";
-    await supabase.from("contacts").insert([{ name, email, message }]);
-    */
+    const result = await sendEmail({
+      subject: `Kontakt — ${name}`,
+      html: contactOwnerEmail({ name, phone, email, message }),
+      replyTo: email,
+    });
 
-    // For now: just log server-side (or integrate with email provider: SendGrid / Brevo)
-    console.log("Contact:", { name, email, message });
-
-    // Example: call external email API here (SendGrid / Brevo) using fetch with API key from env
+    if (!result.ok) {
+      return NextResponse.json({ error: "Slanje nije uspelo" }, { status: 500 });
+    }
 
     return NextResponse.json({ ok: true }, { status: 200 });
   } catch (err) {

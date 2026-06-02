@@ -1,0 +1,222 @@
+import ScrollReveal from "./ScrollReveal";
+import Icon from "./Icon";
+
+const BASE_PRICE = 119;
+const EXTRA_HOUR = 40;
+
+function formatDuration(h) {
+  if (h === 1) return "1 sat";
+  if (h >= 2 && h <= 4) return `${h} sata`;
+  return `${h} sati`;
+}
+
+const hours = [2, 3, 4, 5].map((h) => ({
+  h,
+  label: formatDuration(h),
+  price: BASE_PRICE + (h - 2) * EXTRA_HOUR,
+  base: h === 2,
+}));
+
+const included = [
+  "Profesionalna 360° platforma",
+  "Premium osvetljenje",
+  "Naš tim vodi ceo događaj, vi se opuštate",
+  "Instant obrada snimaka",
+  "Instant nakon snimanja QR, WhatsApp i e-mail deljenje",
+  "Montaža i demontaža opreme",
+];
+
+const cardStyle = {
+  borderColor: "rgba(201,168,76,0.15)",
+  background: "rgba(255,255,255,0.03)",
+};
+
+export default function Pricing() {
+  return (
+    <section id="pricing" className="section-padding" style={{ background: "#0f0f0f" }}>
+      <div className="max-w-5xl mx-auto px-6">
+        <ScrollReveal>
+          <div className="text-center mb-14">
+            <div className="gold-line mb-6" />
+            <h2 className="heading text-[2rem] md:text-[2.75rem] text-white">
+              Cenovnik
+            </h2>
+            <p
+              className="mt-5 text-base md:text-lg max-w-xl mx-auto"
+              style={{ color: "rgba(255,255,255,0.5)" }}
+            >
+              Bez skrivenih troškova. Sve što vidite — to i dobijate.
+            </p>
+          </div>
+        </ScrollReveal>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+          {/* Leva kolona — cenovnik */}
+          <ScrollReveal className="h-full">
+            <div
+              className="border p-8 md:p-10 h-full flex flex-col"
+              style={{ borderColor: "rgba(201,168,76,0.25)", background: "rgba(255,255,255,0.03)" }}
+            >
+              <p
+                className="text-xs font-semibold tracking-[0.18em] uppercase mb-6"
+                style={{ color: "#c9a84c" }}
+              >
+                Cena po trajanju
+              </p>
+
+              <div className="space-y-3 flex-1">
+                {hours.map(({ h, label, price, base }) => (
+                  <div
+                    key={h}
+                    className="flex items-center justify-between py-4 px-5"
+                    style={{
+                      background: base ? "rgba(201,168,76,0.10)" : "transparent",
+                      border: base
+                        ? "1px solid rgba(201,168,76,0.3)"
+                        : "1px solid rgba(255,255,255,0.07)",
+                      borderRadius: "3px",
+                    }}
+                  >
+                    <div className="flex items-center gap-3">
+                      <Icon
+                        name="clock"
+                        size={18}
+                        color={base ? "#c9a84c" : "rgba(255,255,255,0.4)"}
+                        strokeWidth={1.5}
+                      />
+                      <span
+                        className="font-semibold text-[1.0625rem]"
+                        style={{ color: base ? "#c9a84c" : "rgba(255,255,255,0.75)" }}
+                      >
+                        {label}
+                      </span>
+                      {base && (
+                        <span
+                          className="text-[0.7rem] font-bold tracking-wider uppercase px-2 py-0.5"
+                          style={{ background: "#c9a84c", color: "#0f0f0f", borderRadius: "2px" }}
+                        >
+                          Osnova
+                        </span>
+                      )}
+                    </div>
+                    <span
+                      className="heading-serif text-2xl"
+                      style={{ color: base ? "#c9a84c" : "rgba(255,255,255,0.9)" }}
+                    >
+                      {price} €
+                    </span>
+                  </div>
+                ))}
+              </div>
+
+              <p className="mt-5 text-sm" style={{ color: "rgba(255,255,255,0.4)" }}>
+                Svaki sledeći sat angažovanja{" "}
+                <span className="text-white/70 font-medium">+{EXTRA_HOUR} €</span>
+              </p>
+
+              <p className="mt-3 text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.45)" }}>
+                Za Beograd, Pančevo i okolinu put i transport do događaja su besplatni.
+              </p>
+
+              <a
+                href="#booking"
+                className="btn-primary w-full justify-center mt-8 !py-4 !text-base"
+              >
+                Rezerviši Termin →
+              </a>
+            </div>
+          </ScrollReveal>
+
+          {/* Desna kolona */}
+          <div className="flex flex-col gap-6">
+            <ScrollReveal>
+              <div className="border p-8" style={cardStyle}>
+                <p
+                  className="text-xs font-semibold tracking-[0.18em] uppercase mb-5"
+                  style={{ color: "#c9a84c" }}
+                >
+                  Sve je uključeno u cenu
+                </p>
+                <ul className="space-y-3">
+                  {included.map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <span className="mt-0.5 shrink-0">
+                        <Icon name="check" size={18} color="#c9a84c" strokeWidth={2} />
+                      </span>
+                      <span className="text-[0.9375rem]" style={{ color: "rgba(255,255,255,0.7)" }}>
+                        {item}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={80}>
+              <div
+                className="border p-8"
+                style={{
+                  borderColor: "rgba(201,168,76,0.35)",
+                  background:
+                    "linear-gradient(135deg, rgba(201,168,76,0.12) 0%, rgba(201,168,76,0.04) 100%)",
+                }}
+              >
+                <div className="flex items-start gap-4">
+                  <div
+                    className="shrink-0 inline-flex items-center justify-center w-11 h-11 rounded-full"
+                    style={{ background: "rgba(201,168,76,0.15)" }}
+                  >
+                    <Icon name="share" size={20} color="#c9a84c" strokeWidth={1.5} />
+                  </div>
+                  <div>
+                    <p
+                      className="text-xs font-semibold tracking-[0.18em] uppercase mb-2"
+                      style={{ color: "#c9a84c" }}
+                    >
+                      Preporuči prijatelju
+                    </p>
+                    <p className="text-[1.0625rem] font-semibold text-white leading-snug mb-3">
+                      Preporučite nas — oboje štedite
+                    </p>
+                    <p
+                      className="text-[0.9375rem] leading-relaxed"
+                      style={{ color: "rgba(255,255,255,0.6)" }}
+                    >
+                      Preporučite nas nekome ko zakaže i realizuje događaj — i vi i vaš
+                      prijatelj dobijate{" "}
+                      <span className="font-bold" style={{ color: "#c9a84c" }}>
+                        10% popusta
+                      </span>{" "}
+                      na ukupnu cenu. Nagrada za poverenje, s obe strane.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+
+        {/* Urgency — ispod obe kolone */}
+        <ScrollReveal delay={120}>
+          <div
+            className="border p-6 flex items-center gap-4 mt-8"
+            style={{ borderColor: "rgba(255,255,255,0.08)", background: "rgba(255,255,255,0.03)" }}
+          >
+            <Icon name="star" size={22} color="#c9a84c" strokeWidth={1.5} />
+            <p className="text-[0.9375rem]" style={{ color: "rgba(255,255,255,0.6)" }}>
+              Termini za letnju sezonu se popunjavaju brzo —{" "}
+              <a
+                href="#booking"
+                className="font-semibold underline underline-offset-4"
+                style={{ color: "#c9a84c" }}
+              >
+                osigurajte vaš datum odmah
+              </a>
+              .
+            </p>
+          </div>
+        </ScrollReveal>
+      </div>
+    </section>
+  );
+}
