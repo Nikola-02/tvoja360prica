@@ -1,3 +1,16 @@
+const socialLinks = [
+  {
+    label: "Instagram",
+    handle: "@tvoja360prica",
+    href: "https://www.instagram.com/tvoja360prica/",
+  },
+  {
+    label: "Facebook",
+    handle: "Tvoja 360 Priča",
+    href: "https://www.facebook.com/tvoja360prica",
+  },
+];
+
 export default function Footer() {
   return (
     <footer className="py-14 mt-8" style={{ background: "#0f0f0f" }}>
@@ -15,12 +28,31 @@ export default function Footer() {
           >
             tvoja360prica.studio@gmail.com
           </a>
+          <div className="mt-4 flex flex-col gap-2">
+            {socialLinks.map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[0.9375rem] text-white/55 hover:text-[#c9a84c] transition-colors"
+              >
+                {item.label}: <span className="text-white/70">{item.handle}</span>
+              </a>
+            ))}
+          </div>
         </div>
 
         <nav className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8">
-          <a href="#gallery" className="text-sm text-white/45 hover:text-white transition-colors">Snimci</a>
-          <a href="#booking" className="text-sm text-white/45 hover:text-white transition-colors">Rezervacija</a>
-          <a href="#contact" className="text-sm text-white/45 hover:text-white transition-colors">Kontakt</a>
+          <a href="#gallery" className="text-sm text-white/45 hover:text-white transition-colors">
+            Snimci
+          </a>
+          <a href="#booking" className="text-sm text-white/45 hover:text-white transition-colors whitespace-nowrap">
+            Rezervacija
+          </a>
+          <a href="#contact" className="text-sm text-white/45 hover:text-white transition-colors">
+            Kontakt
+          </a>
         </nav>
 
         <div className="text-sm text-white/25">

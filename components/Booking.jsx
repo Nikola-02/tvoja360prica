@@ -199,9 +199,9 @@ export default function Booking() {
 
             {status === "success" && (
               <div className="rounded-xl bg-green-50 border border-green-200 p-4 text-center text-green-800 text-sm">
-                Hvala! Vaš upit je uspešno poslat. Proverite e-mail — poslali
-                smo vam potvrdu sa svim detaljima. Neko iz tima će vas
-                kontaktirati u najkraćem roku.
+                Hvala! Vaš upit je uspešno poslat. Proverite inbox (i spam) — poslali
+                smo vam potvrdu na email. Uskoro će vas neko iz tima kontaktirati
+                radi potvrde termina.
               </div>
             )}
             {status === "error" && (

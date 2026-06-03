@@ -86,23 +86,31 @@ export default function Pricing() {
                       borderRadius: "3px",
                     }}
                   >
-                    <div className="flex items-center justify-between gap-4 w-full">
-                      <div className="flex items-center gap-3 min-w-0">
-                        <Icon
-                          name="clock"
-                          size={18}
-                          color={popular ? "#c9a84c" : "rgba(255,255,255,0.4)"}
-                          strokeWidth={1.5}
-                        />
-                        <span
-                          className="font-semibold text-[1.0625rem]"
-                          style={{ color: popular ? "#c9a84c" : "rgba(255,255,255,0.75)" }}
-                        >
-                          {label}
-                        </span>
+                    <div className="flex items-start sm:items-center justify-between gap-3 w-full">
+                      <div
+                        className={
+                          popular
+                            ? "flex flex-col items-start gap-1.5 min-w-0 sm:flex-row sm:items-center sm:gap-3"
+                            : "flex items-center gap-2 min-w-0"
+                        }
+                      >
+                        <div className="flex items-center gap-2 shrink-0">
+                          <Icon
+                            name="clock"
+                            size={18}
+                            color={popular ? "#c9a84c" : "rgba(255,255,255,0.4)"}
+                            strokeWidth={1.5}
+                          />
+                          <span
+                            className="font-semibold text-[1.0625rem] whitespace-nowrap"
+                            style={{ color: popular ? "#c9a84c" : "rgba(255,255,255,0.75)" }}
+                          >
+                            {label}
+                          </span>
+                        </div>
                         {popular && (
                           <span
-                            className="text-[0.7rem] font-bold tracking-wider uppercase px-2 py-0.5"
+                            className="text-[0.65rem] sm:text-[0.7rem] font-bold tracking-wider uppercase px-2 py-0.5 whitespace-nowrap shrink-0"
                             style={{ background: "#c9a84c", color: "#0f0f0f", borderRadius: "2px" }}
                           >
                             Popularno

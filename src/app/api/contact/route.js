@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { sendEmail } from "../../../../lib/sendEmail";
+import { sendEmail, OWNER_EMAIL } from "../../../../lib/sendEmail";
 import { contactOwnerEmail } from "../../../../lib/emailTemplates";
 
 export async function POST(request) {
@@ -12,18 +12,22 @@ export async function POST(request) {
     }
 
     const result = await sendEmail({
-      subject: `Kontakt — ${name}`,
+      to: OWNER_EMAIL,
+      subject: `Kontakt forma — ${name}`,
       html: contactOwnerEmail({ name, phone, email, message }),
       replyTo: email,
     });
 
     if (!result.ok) {
-      return NextResponse.json({ error: "Slanje nije uspelo" }, { status: 500 });
+      return NextResponse.json(
+        { error: "Slanje poruke nije uspelo. Pokušajte ponovo ili pišite direktno na email." },
+        { status: 500 }
+      );
     }
 
     return NextResponse.json({ ok: true }, { status: 200 });
   } catch (err) {
-    console.error(err);
+    console.error("[Contact]", err);
     return NextResponse.json({ error: "Server error" }, { status: 500 });
   }
 }

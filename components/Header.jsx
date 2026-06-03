@@ -185,7 +185,10 @@ export default function Header() {
             ))}
           </nav>
 
-          <a href="#booking" className="btn-primary !py-2.5 !px-4 sm:!px-5 !text-sm">
+          <a
+            href="#booking"
+            className="btn-primary hidden md:inline-flex !py-2.5 !px-5 !text-sm whitespace-nowrap"
+          >
             Rezerviši Termin
           </a>
 
@@ -247,7 +250,7 @@ export default function Header() {
                   key={link.href}
                   href={link.href}
                   onClick={closeMenu}
-                  className={`mobile-nav-link block px-5 py-3.5 text-base font-medium ${
+                  className={`mobile-nav-link block px-5 py-3.5 text-base font-medium whitespace-nowrap ${
                     link.accent
                       ? "text-[#c9a84c] hover:bg-white/5 border-t border-white/10"
                       : "text-white/70 hover:text-white hover:bg-white/5"

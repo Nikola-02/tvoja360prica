@@ -17,13 +17,17 @@ export async function POST(request) {
     const data = { name, phone, email, social, date, eventType, startTime, hours };
 
     const ownerResult = await sendEmail({
-      subject: `Rezervacija — ${eventType} (${date}) — ${name}`,
+      to: OWNER_EMAIL,
+      subject: `Nova rezervacija — ${eventType} (${date}) — ${name}`,
       html: bookingOwnerEmail(data),
       replyTo: email,
     });
 
     if (!ownerResult.ok) {
-      return NextResponse.json({ error: "Slanje nije uspelo" }, { status: 500 });
+      return NextResponse.json(
+        { error: "Slanje obaveštenja nije uspelo. Pokušajte ponovo ili pišite na email." },
+        { status: 500 }
+      );
     }
 
     const confirmationResult = await sendEmail({
@@ -34,12 +38,15 @@ export async function POST(request) {
     });
 
     if (!confirmationResult.ok) {
-      console.error("Potvrda korisniku nije poslata:", confirmationResult.error);
+      console.error("[Booking] Potvrda korisniku nije poslata:", confirmationResult.error);
     }
 
-    return NextResponse.json({ ok: true, confirmationSent: confirmationResult.ok }, { status: 200 });
+    return NextResponse.json(
+      { ok: true, confirmationSent: confirmationResult.ok },
+      { status: 200 }
+    );
   } catch (err) {
-    console.error(err);
+    console.error("[Booking]", err);
     return NextResponse.json({ error: "Server error" }, { status: 500 });
   }
 }
