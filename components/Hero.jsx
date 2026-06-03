@@ -3,7 +3,7 @@ import Icon from "./Icon";
 
 const stats = [
   { icon: "camera",   value: "1000+",   label: "Snimljenih videa" },
-  { icon: "sparkles", value: "50+",     label: "Uspešnih događaja" },
+  { icon: "sparkles", value: "70+",     label: "Uspešnih događaja" },
   { icon: "phone",    value: "Instant", label: "Deljenje snimaka" },
   { icon: "map",      value: "Srbija",  label: "Dostupno svuda" },
 ];

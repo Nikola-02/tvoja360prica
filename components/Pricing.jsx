@@ -134,10 +134,9 @@ export default function Pricing() {
                       >
                         Više od{" "}
                         <span className="font-semibold" style={{ color: "#c9a84c" }}>
-                          150 klijenata
+                          50+ klijenata
                         </span>{" "}
-                        već je izabralo ovaj paket. Najčešći izbor za venčanja, punoletstva,
-                        team building i proslave.
+                        već je izabralo ovaj paket. Najčešći izbor za venčanja, punoletstva i proslave.
                       </p>
                     )}
                   </div>
