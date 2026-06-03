@@ -13,6 +13,12 @@ const eventTypes = [
   "Drugo",
 ];
 
+const startHourOptions = Array.from({ length: 14 }, (_, i) => {
+  const hour = i + 10;
+  const value = `${String(hour).padStart(2, "0")}:00`;
+  return { value, label: `${hour} h` };
+});
+
 const initialForm = {
   name: "",
   phone: "",
@@ -163,13 +169,19 @@ export default function Booking() {
                 <label className="block text-[0.9375rem] font-semibold text-[#111111]/80 mb-1.5">
                   Početak događaja *
                 </label>
-                <input
+                <select
                   required
-                  type="time"
                   value={form.startTime}
                   onChange={update("startTime")}
                   className="input-premium"
-                />
+                >
+                  <option value="">Izaberite sat</option>
+                  {startHourOptions.map(({ value, label }) => (
+                    <option key={value} value={value}>
+                      {label}
+                    </option>
+                  ))}
+                </select>
               </div>
 
               <div>
