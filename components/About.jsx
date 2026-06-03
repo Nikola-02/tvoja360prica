@@ -19,7 +19,7 @@ export default function About() {
         <ScrollReveal>
           <div className="space-y-5 text-center text-[1.0625rem] leading-[1.8] text-[#0f0f0f]/65">
             <p>
-              <span className="font-semibold text-[#0f0f0f]">360 Priča</span>{" "}
+              <span className="font-semibold text-[#0f0f0f]">Tvoja 360 Priča</span>{" "}
               je specijalizovana 360 video booth usluga sa sedištem u Beogradu,
               dostupna na venčanjima, rođendanima, maturama i korporativnim
               događajima širom Srbije. Ne prodajemo samo opremu. Stvaramo

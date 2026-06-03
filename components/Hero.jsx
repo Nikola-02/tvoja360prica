@@ -1,3 +1,4 @@
+import Image from "next/image";
 import ScrollReveal from "./ScrollReveal";
 import Icon from "./Icon";
 
@@ -102,24 +103,23 @@ export default function Hero() {
             </div>
           </ScrollReveal>
 
-          {/* Video */}
+          {/* Setup preview — video kasnije */}
           <ScrollReveal delay={360}>
             <div
-              className="mt-16 mx-auto max-w-3xl overflow-hidden"
+              className="mt-16 mx-auto relative w-full max-w-[min(72vw,320px)] sm:max-w-[360px] aspect-[9/16] overflow-hidden"
               style={{
                 border: "1px solid rgba(201,168,76,0.25)",
                 borderRadius: "4px",
                 boxShadow: "0 32px 80px rgba(0,0,0,0.5)",
               }}
             >
-              <video
-                src="/videos/sample1.mp4"
-                className="w-full aspect-video object-cover"
-                autoPlay
-                muted
-                loop
-                playsInline
-                aria-label="360 video booth primer snimka sa događaja u Srbiji"
+              <Image
+                src="/setup/booth-setup.jpg"
+                alt="Tvoja 360 Priča, profesionalni 360 video booth setup sa platformom i osvetljenjem"
+                fill
+                priority
+                sizes="(max-width: 640px) 72vw, 360px"
+                className="object-cover object-center"
               />
             </div>
           </ScrollReveal>

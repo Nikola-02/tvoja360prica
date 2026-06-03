@@ -169,7 +169,7 @@ export default function Header() {
         }`}
       >
         <a href="#" className="heading-serif text-[1.2rem] text-white tracking-tight">
-          <span style={{ color: "#c9a84c" }}>360</span> Priča
+          Tvoja <span style={{ color: "#c9a84c" }}>360</span> Priča
         </a>
 
         <div className="flex items-center gap-3 sm:gap-6 md:gap-8">
