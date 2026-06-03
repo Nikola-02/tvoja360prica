@@ -85,7 +85,7 @@ export default function Hero() {
               className="mt-7 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed"
               style={{ color: "rgba(255,255,255,0.6)" }}
             >
-              Svaki trenutak pretvaramo u spektakularni 360° video — spreman
+              Svaki trenutak pretvaramo u spektakularni 360° video, spreman
               za deljenje odmah nakon snimanja.
             </p>
           </ScrollReveal>

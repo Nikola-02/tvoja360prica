@@ -19,17 +19,17 @@ export default function About() {
         <ScrollReveal>
           <div className="space-y-5 text-center text-[1.0625rem] leading-[1.8] text-[#0f0f0f]/65">
             <p>
-              <span className="font-semibold text-[#0f0f0f]">Tvoja 360 Priča</span>{" "}
+              <span className="font-semibold text-[#0f0f0f]">360 Priča</span>{" "}
               je specijalizovana 360 video booth usluga sa sedištem u Beogradu,
               dostupna na venčanjima, rođendanima, maturama i korporativnim
-              događajima širom Srbije. Ne prodajemo samo opremu — stvaramo
+              događajima širom Srbije. Ne prodajemo samo opremu. Stvaramo
               iskustvo koje gosti pamte i dele.
             </p>
             <p>
               Svaki događaj vodimo sa punom pažnjom: dolazimo na vreme,
               postavljamo setup diskretno i profesionalno, a operater vodi goste
               kroz snimanje tako da se osećaju opušteno i zabavno. Vi slavite,
-              mi radimo — od prve do poslednje minute.
+              mi radimo od prve do poslednje minute.
             </p>
             <p>
               Snimci su oštri, dinamični i spremni za deljenje za nekoliko

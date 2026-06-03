@@ -102,7 +102,7 @@ export default function WhatYouNeed() {
           <ScrollReveal>
             <SectionHeader
               title="Kompletna usluga"
-              description="Sve što vam treba za nezaboravno 360 video iskustvo — na jednom mestu."
+              description="Sve što vam treba za nezaboravno 360 video iskustvo na jednom mestu."
             />
           </ScrollReveal>
 

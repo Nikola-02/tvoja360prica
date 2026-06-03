@@ -28,7 +28,7 @@ export async function POST(request) {
 
     const confirmationResult = await sendEmail({
       to: email,
-      subject: `Potvrda upita — ${eventType} — Tvoja 360 Priča`,
+      subject: `Potvrda upita — ${eventType} — 360 Priča`,
       html: bookingConfirmationEmail(data),
       replyTo: OWNER_EMAIL,
     });

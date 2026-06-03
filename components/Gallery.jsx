@@ -23,7 +23,7 @@ export default function Gallery() {
         <ScrollReveal>
           <SectionHeader
             title="Pogledajte magiju u pokretu"
-            description="Pravi snimci sa venčanja, rođendana i proslava širom Srbije. Gosti odlaze sa video uspomenom u ruci — odmah nakon snimanja."
+            description="Pravi snimci sa venčanja, rođendana i proslava širom Srbije. Gosti odlaze sa video uspomenom u ruci odmah nakon snimanja."
           />
         </ScrollReveal>
 

@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-10">
         <div>
           <div className="heading-serif text-xl text-white">
-            Tvoja <span style={{ color: "#c9a84c" }}>360</span> Priča
+            <span style={{ color: "#c9a84c" }}>360</span> Priča
           </div>
           <p className="mt-2 text-[0.9375rem] text-white/45">
             360° video booth · Beograd i cela Srbija
@@ -24,7 +24,7 @@ export default function Footer() {
         </nav>
 
         <div className="text-sm text-white/25">
-          © {new Date().getFullYear()} Tvoja 360 Priča
+          © {new Date().getFullYear()} 360 Priča
         </div>
       </div>
     </footer>
