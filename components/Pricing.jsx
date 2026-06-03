@@ -3,6 +3,11 @@ import Icon from "./Icon";
 
 const BASE_PRICE = 119;
 const EXTRA_HOUR = 40;
+const OLD_PRICE_MARKUP = 1.35;
+
+function oldPriceFrom(price) {
+  return Math.round((price * OLD_PRICE_MARKUP) / 10) * 10;
+}
 
 function formatDuration(h) {
   if (h === 1) return "1 sat";
@@ -10,12 +15,16 @@ function formatDuration(h) {
   return `${h} sati`;
 }
 
-const hours = [2, 3, 4, 5].map((h) => ({
-  h,
-  label: formatDuration(h),
-  price: BASE_PRICE + (h - 2) * EXTRA_HOUR,
-  base: h === 2,
-}));
+const hours = [2, 3, 4, 5].map((h) => {
+  const price = BASE_PRICE + (h - 2) * EXTRA_HOUR;
+  return {
+    h,
+    label: formatDuration(h),
+    price,
+    oldPrice: oldPriceFrom(price),
+    popular: h === 3,
+  };
+});
 
 const included = [
   "Profesionalna 360° platforma",
@@ -65,46 +74,72 @@ export default function Pricing() {
               </p>
 
               <div className="space-y-3 flex-1">
-                {hours.map(({ h, label, price, base }) => (
+                {hours.map(({ h, label, price, oldPrice, popular }) => (
                   <div
                     key={h}
-                    className="flex items-center justify-between py-4 px-5"
+                    className="py-4 px-5"
                     style={{
-                      background: base ? "rgba(201,168,76,0.10)" : "transparent",
-                      border: base
+                      background: popular ? "rgba(201,168,76,0.10)" : "transparent",
+                      border: popular
                         ? "1px solid rgba(201,168,76,0.3)"
                         : "1px solid rgba(255,255,255,0.07)",
                       borderRadius: "3px",
                     }}
                   >
-                    <div className="flex items-center gap-3">
-                      <Icon
-                        name="clock"
-                        size={18}
-                        color={base ? "#c9a84c" : "rgba(255,255,255,0.4)"}
-                        strokeWidth={1.5}
-                      />
-                      <span
-                        className="font-semibold text-[1.0625rem]"
-                        style={{ color: base ? "#c9a84c" : "rgba(255,255,255,0.75)" }}
-                      >
-                        {label}
-                      </span>
-                      {base && (
+                    <div className="flex items-center justify-between gap-4 w-full">
+                      <div className="flex items-center gap-3 min-w-0">
+                        <Icon
+                          name="clock"
+                          size={18}
+                          color={popular ? "#c9a84c" : "rgba(255,255,255,0.4)"}
+                          strokeWidth={1.5}
+                        />
                         <span
-                          className="text-[0.7rem] font-bold tracking-wider uppercase px-2 py-0.5"
-                          style={{ background: "#c9a84c", color: "#0f0f0f", borderRadius: "2px" }}
+                          className="font-semibold text-[1.0625rem]"
+                          style={{ color: popular ? "#c9a84c" : "rgba(255,255,255,0.75)" }}
                         >
-                          Osnova
+                          {label}
                         </span>
-                      )}
+                        {popular && (
+                          <span
+                            className="text-[0.7rem] font-bold tracking-wider uppercase px-2 py-0.5"
+                            style={{ background: "#c9a84c", color: "#0f0f0f", borderRadius: "2px" }}
+                          >
+                            Popularno
+                          </span>
+                        )}
+                      </div>
+                      <div className="flex flex-col items-end gap-0.5 shrink-0">
+                        <span
+                          className="text-sm line-through decoration-white/25"
+                          style={{ color: "rgba(255,255,255,0.35)" }}
+                        >
+                          {oldPrice} €
+                        </span>
+                        <span
+                          className="heading-serif text-2xl leading-none"
+                          style={{ color: popular ? "#c9a84c" : "rgba(255,255,255,0.9)" }}
+                        >
+                          {price} €
+                        </span>
+                      </div>
                     </div>
-                    <span
-                      className="heading-serif text-2xl"
-                      style={{ color: base ? "#c9a84c" : "rgba(255,255,255,0.9)" }}
-                    >
-                      {price} €
-                    </span>
+                    {popular && (
+                      <p
+                        className="mt-3 pt-3 text-xs leading-relaxed border-t"
+                        style={{
+                          color: "rgba(255,255,255,0.5)",
+                          borderColor: "rgba(201,168,76,0.2)",
+                        }}
+                      >
+                        Više od{" "}
+                        <span className="font-semibold" style={{ color: "#c9a84c" }}>
+                          150 klijenata
+                        </span>{" "}
+                        već je izabralo ovaj paket. Najčešći izbor za venčanja, punoletstva,
+                        team building i proslave.
+                      </p>
+                    )}
                   </div>
                 ))}
               </div>
@@ -114,8 +149,22 @@ export default function Pricing() {
                 <span className="text-white/70 font-medium">+{EXTRA_HOUR} €</span>
               </p>
 
-              <p className="mt-3 text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.45)" }}>
-                Za Beograd, Pančevo i okolinu put i transport do događaja su besplatni.
+              <p
+                className="mt-4 text-sm leading-relaxed px-4 py-3 border-l-2"
+                style={{
+                  color: "rgba(255,255,255,0.72)",
+                  borderColor: "#c9a84c",
+                  background: "rgba(201,168,76,0.08)",
+                  borderRadius: "0 3px 3px 0",
+                }}
+              >
+                Za{" "}
+                <span className="font-semibold text-white">Beograd, Pančevo i okolinu</span>{" "}
+                put i transport do događaja su{" "}
+                <span className="font-bold" style={{ color: "#c9a84c" }}>
+                  besplatni
+                </span>
+                .
               </p>
 
               <a
@@ -135,7 +184,7 @@ export default function Pricing() {
                   className="text-xs font-semibold tracking-[0.18em] uppercase mb-5"
                   style={{ color: "#c9a84c" }}
                 >
-                  Sve je uključeno u cenu
+                  Šta je sve uključeno u cenu
                 </p>
                 <ul className="space-y-3">
                   {included.map((item) => (

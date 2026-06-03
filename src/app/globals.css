@@ -262,3 +262,69 @@ body {
 .bg-warm {
   background-color: var(--warm);
 }
+
+/* ─── Mobile nav ─── */
+.mobile-nav-backdrop {
+  transition: opacity 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-nav-panel {
+  transition:
+    opacity 0.32s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-nav-header,
+.mobile-nav-close,
+.mobile-nav-link {
+  transition:
+    opacity 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.2s ease,
+    background-color 0.2s ease;
+  transition-delay: 0ms;
+}
+
+.mobile-nav-header {
+  opacity: 0;
+  transform: translateY(-4px);
+}
+
+.mobile-nav-header--open {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 60ms;
+}
+
+.mobile-nav-close {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.75);
+}
+
+.mobile-nav-close--open {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+  transition-delay: 100ms;
+}
+
+.mobile-nav-link {
+  opacity: 0;
+  transform: translateX(-8px);
+}
+
+.mobile-nav-link--open {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: calc(120ms + var(--nav-index, 0) * 45ms);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mobile-nav-backdrop,
+  .mobile-nav-panel,
+  .mobile-nav-header,
+  .mobile-nav-close,
+  .mobile-nav-link {
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+  }
+}
