@@ -96,7 +96,10 @@ const structuredData = {
     "360 platforma za venčanja",
     "video booth za rođendane",
   ],
-  sameAs: [],
+  sameAs: [
+    "https://www.instagram.com/tvoja360prica/",
+    "https://www.facebook.com/tvoja360prica",
+  ],
 };
 
 export default function RootLayout({ children }) {
