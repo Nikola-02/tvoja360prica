@@ -1,6 +1,7 @@
 import { Plus_Jakarta_Sans, Fraunces } from "next/font/google";
 import "./globals.css";
 import Header from "../../components/Header";
+import PromoPopup from "../../components/PromoPopup";
 import { SITE_URL } from "../../lib/site";
 
 const jakarta = Plus_Jakarta_Sans({
@@ -115,6 +116,7 @@ export default function RootLayout({ children }) {
         className={`${jakarta.variable} ${fraunces.variable} antialiased bg-white text-[#111111]`}
       >
         <Header />
+        <PromoPopup />
         <main className="min-h-screen">
           {children}
         </main>
