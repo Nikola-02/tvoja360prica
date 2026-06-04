@@ -119,7 +119,7 @@ export default function Pricing() {
                             className="text-[0.65rem] sm:text-[0.7rem] font-bold tracking-wider uppercase px-2 py-0.5 whitespace-nowrap shrink-0"
                             style={{ background: "#c9a84c", color: "#0f0f0f", borderRadius: "2px" }}
                           >
-                            169€ / 3h · Najbolja ponuda
+                            Popularno
                           </span>
                         )}
                       </div>
@@ -146,9 +146,12 @@ export default function Pricing() {
                           borderColor: "rgba(201,168,76,0.2)",
                         }}
                       >
-                        Najpovolniji paket na tržištu: GoPro Hero 13 Black, platforma
-                        za 4 osobe, rekviziti i besplatna dostava u Beogradu i Pančevu.
-                        Dostupno i na događajima širom Srbije.
+                        Najpovolniji paket na tržištu. Više od{" "}
+                        <span className="font-semibold" style={{ color: "#c9a84c" }}>
+                          50+ klijenata
+                        </span>{" "}
+                        već je izabralo ovaj paket. Najčešći izbor za venčanja,
+                        punoletstva i proslave.
                       </p>
                     )}
                   </div>
