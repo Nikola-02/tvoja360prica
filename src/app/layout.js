@@ -22,7 +22,7 @@ const siteUrl = SITE_URL;
 const metaTitle =
   "360 Video Booth Beograd, Pančevo i Srbija | 3h za 169€ | Tvoja 360 Priča";
 const metaDescription =
-  "Iznajmljivanje 360 video booth platforme u Beogradu, Pančevu i širom Srbije za samo 169€ za 3 sata! Snimanje sa najnovijom GoPro Hero 13 Black kamerom u 6K rezoluciji. Velika platforma za 4 osobe i unikatni rekviziti. Besplatna dostava u Beogradu i Pančevu.";
+  "Iznajmljivanje 360 video booth platforme u Beogradu, Pančevu i širom Srbije za samo 169€ za 3 sata! Snimamo uz najnoviju GoPro Hero 13 Black kameru u skoro 6K rezoluciji. Velika platforma za 4 osobe i unikatni rekviziti. Besplatna dostava u Beogradu i Pančevu.";
 
 export const metadata = {
   title: {
@@ -126,7 +126,7 @@ const structuredData = {
         { "@type": "Country", name: "Srbija" },
       ],
       description:
-        "360 video booth sa GoPro Hero 13 Black kamerom (skoro 6K), platformom od 100 cm za do 4 osobe, unikatnim rekvizitima i instant preuzimanjem snimaka putem QR koda.",
+        "Snimamo vaše događaje uz GoPro Hero 13 Black (skoro 6K), platformu od 100 cm za do 4 osobe, unikatne rekvizite i instant preuzimanje snimaka putem QR koda.",
       offers: {
         "@type": "Offer",
         name: "3 sata — glavni paket",

@@ -86,7 +86,7 @@ export default function Hero() {
               className="mt-7 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-normal"
               style={{ color: "rgba(255,255,255,0.6)" }}
             >
-              Snimajte vaše uspomene u skoro 6K rezoluciji uz najnoviju GoPro
+              Snimamo vaše uspomene u skoro 6K rezoluciji uz najnoviju GoPro
               Hero 13 Black kameru i veliku platformu za 4 osobe.
             </h2>
           </ScrollReveal>
