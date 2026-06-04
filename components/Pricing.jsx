@@ -27,12 +27,12 @@ const hours = [2, 3, 4, 5].map((h) => {
 });
 
 const included = [
-  "Profesionalna 360° platforma",
-  "Premium osvetljenje",
-  "Naš tim vodi ceo događaj, vi se opuštate",
-  "Instant obrada snimaka",
-  "Instant nakon snimanja QR, WhatsApp i e-mail deljenje",
-  "Montaža i demontaža opreme",
+  "Najnovija GoPro Hero 13 Black kamera (skoro 6K, stabilizovan video)",
+  "Velika platforma od 100 cm prečnika (za do 4 osobe istovremeno)",
+  "Unikatni i jedinstveni rekviziti uključeni u cenu",
+  "Besplatna dostava i montaža u Beogradu i Pančevu · dostupno širom Srbije",
+  "Instant preuzimanje snimaka putem QR koda",
+  "Naš tim vodi ceo događaj — vi se opuštate, mi radimo",
 ];
 
 const cardStyle = {
@@ -48,13 +48,19 @@ export default function Pricing() {
           <div className="text-center mb-14">
             <div className="gold-line mb-6" />
             <h2 className="heading text-[2rem] md:text-[2.75rem] text-white">
-              Cenovnik
+              Cenovnik — Tvoja 360 Priča
             </h2>
             <p
-              className="mt-5 text-base md:text-lg max-w-xl mx-auto"
+              className="mt-5 text-base md:text-lg max-w-2xl mx-auto"
               style={{ color: "rgba(255,255,255,0.5)" }}
             >
-              Bez skrivenih troškova. Sve što vidite — to i dobijate.
+              Glavni paket{" "}
+              <span className="font-bold" style={{ color: "#c9a84c" }}>
+                169€ / 3 sata
+              </span>{" "}
+              — ubedljivo najpovolnije na tržištu u Beogradu, Pančevu i širom
+              Srbije. Bez
+              skrivenih troškova.
             </p>
           </div>
         </ScrollReveal>
@@ -113,7 +119,7 @@ export default function Pricing() {
                             className="text-[0.65rem] sm:text-[0.7rem] font-bold tracking-wider uppercase px-2 py-0.5 whitespace-nowrap shrink-0"
                             style={{ background: "#c9a84c", color: "#0f0f0f", borderRadius: "2px" }}
                           >
-                            Popularno
+                            169€ / 3h · Najbolja ponuda
                           </span>
                         )}
                       </div>
@@ -140,11 +146,9 @@ export default function Pricing() {
                           borderColor: "rgba(201,168,76,0.2)",
                         }}
                       >
-                        Više od{" "}
-                        <span className="font-semibold" style={{ color: "#c9a84c" }}>
-                          50+ klijenata
-                        </span>{" "}
-                        već je izabralo ovaj paket. Najčešći izbor za venčanja, punoletstva i proslave.
+                        Najpovolniji paket na tržištu: GoPro Hero 13 Black, platforma
+                        za 4 osobe, rekviziti i besplatna dostava u Beogradu i Pančevu.
+                        Dostupno i na događajima širom Srbije.
                       </p>
                     )}
                   </div>
@@ -171,7 +175,8 @@ export default function Pricing() {
                 <span className="font-bold" style={{ color: "#c9a84c" }}>
                   besplatni
                 </span>
-                .
+                . Iznajmljivanje dostupno i na događajima{" "}
+                <span className="font-semibold text-white">širom Srbije</span>.
               </p>
 
               <a
@@ -191,7 +196,7 @@ export default function Pricing() {
                   className="text-xs font-semibold tracking-[0.18em] uppercase mb-5"
                   style={{ color: "#c9a84c" }}
                 >
-                  Šta je sve uključeno u cenu
+                  Prednosti paketa (169€ / 3 sata)
                 </p>
                 <ul className="space-y-3">
                   {included.map((item) => (

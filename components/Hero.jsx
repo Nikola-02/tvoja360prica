@@ -63,32 +63,32 @@ export default function Hero() {
               className="text-sm font-semibold tracking-[0.2em] uppercase mb-6"
               style={{ color: "rgba(201,168,76,0.75)" }}
             >
-              360° Video Booth · Beograd i cela Srbija
+              Tvoja 360 Priča · 360 Video Booth · Beograd, Pančevo i širom Srbije
             </p>
           </ScrollReveal>
 
           {/* Glavni naslov */}
           <ScrollReveal delay={120}>
             <h1
-              className="display text-[2.6rem] sm:text-[3.5rem] md:text-[4.5rem] lg:text-[5rem] text-white max-w-4xl mx-auto"
-              style={{ lineHeight: 1.06 }}
+              className="display text-[2rem] sm:text-[2.75rem] md:text-[3.5rem] lg:text-[4rem] text-white max-w-4xl mx-auto"
+              style={{ lineHeight: 1.1 }}
             >
-              Učinite vašu proslavu{" "}
+              Najbolji 360 Video Booth u Beogradu, Pančevu i širom Srbije –{" "}
               <span className="display-italic" style={{ color: "#c9a84c" }}>
-                nezaboravnom
+                3h za samo 169€
               </span>
             </h1>
           </ScrollReveal>
 
           {/* Podnaslov */}
           <ScrollReveal delay={200}>
-            <p
-              className="mt-7 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed"
+            <h2
+              className="mt-7 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-normal"
               style={{ color: "rgba(255,255,255,0.6)" }}
             >
-              Svaki trenutak pretvaramo u spektakularni 360° video, spreman
-              za deljenje odmah nakon snimanja.
-            </p>
+              Snimajte vaše uspomene u skoro 6K rezoluciji uz najnoviju GoPro
+              Hero 13 Black kameru i veliku platformu za 4 osobe.
+            </h2>
           </ScrollReveal>
 
           {/* CTA */}
@@ -115,7 +115,7 @@ export default function Hero() {
             >
               <Image
                 src="/setup/booth-setup.jpg"
-                alt="Tvoja 360 Priča, profesionalni 360 video booth setup sa platformom i osvetljenjem"
+                alt="Tvoja 360 Priča — 360 video booth Beograd, Pančevo i širom Srbije, GoPro Hero 13 Black i platforma 100 cm"
                 fill
                 priority
                 sizes="(max-width: 640px) 72vw, 360px"

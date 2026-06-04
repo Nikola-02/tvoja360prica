@@ -21,8 +21,8 @@ export default function About() {
             <p>
               <span className="font-semibold text-[#0f0f0f]">Tvoja 360 Priča</span>{" "}
               je specijalizovana 360 video booth usluga sa sedištem u Beogradu,
-              dostupna na venčanjima, rođendanima, maturama i korporativnim
-              događajima širom Srbije. Ne prodajemo samo opremu. Stvaramo
+              dostupna u Pančevu i na venčanjima, rođendanima, maturama i
+              korporativnim događajima širom Srbije. Ne prodajemo samo opremu. Stvaramo
               iskustvo koje gosti pamte i dele.
             </p>
             <p>
