@@ -65,7 +65,7 @@ export default function PromoPopup() {
           </svg>
         </button>
 
-        <div className="px-4 pt-4 pb-4 pr-10">
+        <div className="px-5 pt-5 pb-5 text-center">
           <p className="text-[0.625rem] font-bold uppercase tracking-[0.16em] text-[#c9a84c]">
             Specijalna ponuda
           </p>
@@ -76,7 +76,7 @@ export default function PromoPopup() {
             Rezervišite bilo koji paket i dobijate još 1 sat snimanja besplatno.
           </p>
 
-          <div className="mt-3.5 flex flex-col gap-2">
+          <div className="mt-4 flex flex-col items-center gap-2">
             <a
               href="#booking"
               onClick={dismiss}
@@ -87,7 +87,7 @@ export default function PromoPopup() {
             <button
               type="button"
               onClick={dismiss}
-              className="text-xs text-white/40 hover:text-white/65 transition-colors text-left"
+              className="text-xs text-white/40 hover:text-white/65 transition-colors"
             >
               Ne sada
             </button>
