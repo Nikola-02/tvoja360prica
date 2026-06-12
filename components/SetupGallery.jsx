@@ -79,8 +79,8 @@ export default function SetupGallery() {
 
         <ScrollReveal>
           <div className="mt-14 text-center">
-            <a href="#booking" className="btn-primary">
-              Rezerviši Termin
+            <a href="#booking" className="btn-primary whitespace-nowrap">
+              Proveri slobodan termin
             </a>
           </div>
         </ScrollReveal>

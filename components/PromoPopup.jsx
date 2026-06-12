@@ -80,9 +80,9 @@ export default function PromoPopup() {
             <a
               href="#booking"
               onClick={dismiss}
-              className="btn-primary w-full justify-center !py-2.5 !px-4 !text-xs sm:!text-sm"
+              className="btn-primary w-full justify-center !py-2.5 !px-4 !text-xs sm:!text-sm whitespace-nowrap"
             >
-              Rezerviši Termin
+              Proveri slobodan termin
             </a>
             <button
               type="button"

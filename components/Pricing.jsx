@@ -1,7 +1,7 @@
 import ScrollReveal from "./ScrollReveal";
 import Icon from "./Icon";
 
-const BASE_PRICE = 129;
+const BASE_PRICE = 149;
 const EXTRA_HOUR = 40;
 const OLD_PRICE_MARKUP = 1.35;
 
@@ -15,7 +15,7 @@ function formatDuration(h) {
   return `${h} sati`;
 }
 
-const hours = [2, 3, 4, 5].map((h) => {
+const hours = [2, 3, 4].map((h) => {
   const price = BASE_PRICE + (h - 2) * EXTRA_HOUR;
   return {
     h,
@@ -27,7 +27,7 @@ const hours = [2, 3, 4, 5].map((h) => {
 });
 
 const included = [
-  "Najnovija GoPro Hero 13 Black kamera (skoro 6K, stabilizovan video)",
+  "Najnovija GoPro Hero 12 Black kamera (skoro 6K, stabilizovan video)",
   "Velika platforma od 100 cm prečnika (za do 4 osobe istovremeno)",
   "Unikatni i jedinstveni rekviziti uključeni u cenu",
   "Besplatna dostava i montaža u Beogradu i Pančevu · dostupno širom Srbije",
@@ -54,12 +54,7 @@ export default function Pricing() {
               className="mt-5 text-base md:text-lg max-w-2xl mx-auto"
               style={{ color: "rgba(255,255,255,0.5)" }}
             >
-              Glavni paket{" "}
-              <span className="font-bold" style={{ color: "#c9a84c" }}>
-                169€ / 3 sata
-              </span>{" "}
-              — ubedljivo najpovolnije na tržištu u Beogradu, Pančevu i širom
-              Srbije. Bez
+              Transparentne cene za Beograd, Pančevo i širom Srbije — bez
               skrivenih troškova.
             </p>
           </div>
@@ -184,9 +179,9 @@ export default function Pricing() {
 
               <a
                 href="#booking"
-                className="btn-primary w-full justify-center mt-8 !py-4 !text-base"
+                className="btn-primary w-full justify-center mt-8 !py-4 !text-base whitespace-nowrap"
               >
-                Rezerviši Termin →
+                Proveri slobodan termin →
               </a>
             </div>
           </ScrollReveal>
@@ -199,7 +194,7 @@ export default function Pricing() {
                   className="text-xs font-semibold tracking-[0.18em] uppercase mb-5"
                   style={{ color: "#c9a84c" }}
                 >
-                  Prednosti paketa (169€ / 3 sata)
+                  Prednosti paketa
                 </p>
                 <ul className="space-y-3">
                   {included.map((item) => (

@@ -152,7 +152,7 @@ export default function Header() {
 
   const menuItems = [
     ...links,
-    { href: "#booking", label: "Rezerviši Termin", accent: true },
+    { href: "#booking", label: "Proveri slobodan termin", accent: true },
   ];
 
   const panelOpenClass = menuActive
@@ -192,9 +192,9 @@ export default function Header() {
 
           <a
             href="#booking"
-            className="btn-primary hidden md:inline-flex shrink-0 whitespace-nowrap !py-2 !px-3.5 !text-xs lg:!py-2.5 lg:!px-4 lg:!text-sm"
+            className="btn-primary hidden md:inline-flex shrink-0 whitespace-nowrap !py-2 !px-3 lg:!py-2.5 lg:!px-4 !text-[0.7rem] lg:!text-xs xl:!text-sm"
           >
-            Rezerviši Termin
+            Proveri slobodan termin
           </a>
 
           <button

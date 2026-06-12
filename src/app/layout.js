@@ -20,9 +20,9 @@ const fraunces = Fraunces({
 const siteUrl = SITE_URL;
 
 const metaTitle =
-  "360 Video Booth Beograd, Pančevo i Srbija | 3h za 169€ | Tvoja 360 Priča";
+  "360 Video Booth Beograd, Pančevo i Srbija | Tvoja 360 Priča";
 const metaDescription =
-  "Iznajmljivanje 360 video booth platforme u Beogradu, Pančevu i širom Srbije za samo 169€ za 3 sata! Snimamo uz najnoviju GoPro Hero 13 Black kameru u skoro 6K rezoluciji. Velika platforma za 4 osobe i unikatni rekviziti. Besplatna dostava u Beogradu i Pančevu.";
+  "Premium 360 video iskustvo za svadbe, punoletstva i korporativne događaje u Beogradu, Pančevu i širom Srbije. Snimamo uz GoPro Hero 12 Black kameru u skoro 6K rezoluciji. Velika platforma za 4 osobe i unikatni rekviziti. Besplatna dostava u Beogradu i Pančevu.";
 
 export const metadata = {
   title: {
@@ -36,7 +36,7 @@ export const metadata = {
     "360 video booth Srbija",
     "iznajmljivanje 360 video booth",
     "360 platforma za venčanja",
-    "GoPro Hero 13 Black 360 booth",
+    "GoPro Hero 12 Black 360 booth",
     "360 video za svadbe",
     "video booth za rođendane",
     "360 kamera za događaje",
@@ -59,7 +59,7 @@ export const metadata = {
         url: `${siteUrl}/setup/booth-setup.jpg`,
         width: 1200,
         height: 630,
-        alt: "Tvoja 360 Priča — 360 video booth u Beogradu, Pančevu i širom Srbije, GoPro Hero 13 Black, platforma za 4 osobe",
+        alt: "Tvoja 360 Priča — 360 video booth u Beogradu, Pančevu i širom Srbije, GoPro Hero 12 Black, platforma za 4 osobe",
       },
     ],
   },
@@ -87,7 +87,7 @@ const structuredData = {
       name: "Tvoja 360 Priča",
       alternateName: "Tvoja 360 Priča — 360 Video Booth",
       description:
-        "Iznajmljivanje 360 video booth platforme u Beogradu, Pančevu i širom Srbije. GoPro Hero 13 Black kamera, platforma prečnika 100 cm za 4 osobe, unikatni rekviziti i besplatna dostava u Beogradu i Pančevu.",
+        "Iznajmljivanje 360 video booth platforme u Beogradu, Pančevu i širom Srbije. GoPro Hero 12 Black kamera, platforma prečnika 100 cm za 4 osobe, unikatni rekviziti i besplatna dostava u Beogradu i Pančevu.",
       url: siteUrl,
       image: `${siteUrl}/setup/booth-setup.jpg`,
       email: "tvoja360prica.studio@gmail.com",
@@ -126,14 +126,14 @@ const structuredData = {
         { "@type": "Country", name: "Srbija" },
       ],
       description:
-        "Snimamo vaše događaje uz GoPro Hero 13 Black (skoro 6K), platformu od 100 cm za do 4 osobe, unikatne rekvizite i instant preuzimanje snimaka putem QR koda.",
+        "Snimamo vaše događaje uz GoPro Hero 12 Black (skoro 6K), platformu od 100 cm za do 4 osobe, unikatne rekvizite i instant preuzimanje snimaka putem QR koda.",
       offers: {
         "@type": "Offer",
         name: "3 sata — glavni paket",
-        price: 169,
+        price: 189,
         priceCurrency: "EUR",
         description:
-          "169€ za 3 sata angazovanja. Uključuje GoPro Hero 13 Black, veliku platformu, rekvizite i besplatnu dostavu u Beogradu i Pančevu. Dostupno i širom Srbije.",
+          "189€ za 3 sata angazovanja. Uključuje GoPro Hero 12 Black, veliku platformu, rekvizite i besplatnu dostavu u Beogradu i Pančevu. Dostupno i širom Srbije.",
         availability: "https://schema.org/InStock",
         url: `${siteUrl}/#pricing`,
       },

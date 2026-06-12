@@ -64,8 +64,8 @@ export default function About() {
 
         <ScrollReveal>
           <div className="mt-12 text-center">
-            <a href="#booking" className="btn-primary">
-              Rezerviši Termin →
+            <a href="#booking" className="btn-primary whitespace-nowrap">
+              Proveri slobodan termin →
             </a>
           </div>
         </ScrollReveal>

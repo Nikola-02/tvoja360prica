@@ -73,10 +73,7 @@ export default function Hero() {
               className="display text-[2rem] sm:text-[2.75rem] md:text-[3.5rem] lg:text-[4rem] text-white max-w-4xl mx-auto"
               style={{ lineHeight: 1.1 }}
             >
-              Najbolji 360 Video Booth u Beogradu, Pančevu i širom Srbije –{" "}
-              <span className="display-italic" style={{ color: "#c9a84c" }}>
-                3h za samo 169€
-              </span>
+              Pretvorite svoju proslavu u događaj o kome će svi pričati.
             </h1>
           </ScrollReveal>
 
@@ -86,16 +83,19 @@ export default function Hero() {
               className="mt-7 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-normal"
               style={{ color: "rgba(255,255,255,0.6)" }}
             >
-              Snimamo vaše uspomene u skoro 6K rezoluciji uz najnoviju GoPro
-              Hero 13 Black kameru i veliku platformu za 4 osobe.
+              Premium 360 video iskustvo za svadbe, punoletstva i korporativne
+              događaje. Gosti dobijaju svoje videe odmah, a uspomene ostaju zauvek.
             </h2>
           </ScrollReveal>
 
           {/* CTA */}
           <ScrollReveal delay={280}>
             <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-              <a href="#booking" className="btn-primary text-base !px-8 !py-4">
-                Rezerviši Termin →
+              <a
+                href="#booking"
+                className="btn-primary text-base !px-8 !py-4 whitespace-nowrap"
+              >
+                Proveri slobodan termin →
               </a>
               <a href="#gallery" className="btn-ghost text-base !px-8 !py-4">
                 Pogledaj Snimke
@@ -115,7 +115,7 @@ export default function Hero() {
             >
               <Image
                 src="/setup/booth-setup.jpg"
-                alt="Tvoja 360 Priča — 360 video booth Beograd, Pančevo i širom Srbije, GoPro Hero 13 Black i platforma 100 cm"
+                alt="Tvoja 360 Priča — 360 video booth Beograd, Pančevo i širom Srbije, GoPro Hero 12 Black i platforma 100 cm"
                 fill
                 priority
                 sizes="(max-width: 640px) 72vw, 360px"

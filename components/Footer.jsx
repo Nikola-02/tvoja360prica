@@ -20,7 +20,7 @@ export default function Footer() {
             Tvoja <span style={{ color: "#c9a84c" }}>360</span> Priča
           </div>
           <p className="mt-2 text-[0.9375rem] text-white/45">
-            360 video booth · Beograd, Pančevo i širom Srbije · od 169€ / 3h
+            360 video booth · Beograd, Pančevo i širom Srbije · od 149€ / 2h
           </p>
           <a
             href="mailto:tvoja360prica.studio@gmail.com"
