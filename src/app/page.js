@@ -6,6 +6,7 @@ import {
 import {
   buildGraph,
   faqSchema,
+  heroVideoSchema,
   localBusinessSchema,
   serviceSchema,
   webPageSchema,
@@ -36,6 +37,7 @@ const homeSchema = buildGraph([
   localBusinessSchema(),
   serviceSchema(),
   faqSchema(),
+  heroVideoSchema(),
   webPageSchema({
     url: SITE_URL,
     name: HOME_TITLE,

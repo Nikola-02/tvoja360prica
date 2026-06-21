@@ -46,7 +46,7 @@ export const metadata = {
         url: OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: "360 video booth Beograd — premium 360 video booth Srbija",
+        alt: "360 video booth Beograd, premium 360 video booth Srbija",
       },
     ],
   },

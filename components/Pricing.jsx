@@ -32,7 +32,7 @@ const included = [
   "Unikatni i jedinstveni rekviziti uključeni u cenu",
   "Besplatna dostava i montaža u Beogradu i Pančevu · dostupno širom Srbije",
   "Instant preuzimanje snimaka putem QR koda",
-  "Naš tim vodi ceo događaj — vi se opuštate, mi radimo",
+  "Naš tim vodi ceo događaj. Vi se opuštate, mi radimo",
 ];
 
 const cardStyle = {
@@ -48,13 +48,13 @@ export default function Pricing() {
           <div className="text-center mb-14">
             <div className="gold-line mb-6" />
             <h2 className="heading text-[2rem] md:text-[2.75rem] text-white">
-              Cenovnik — 360 Video Booth
+              Cenovnik | 360 Video Booth
             </h2>
             <p
               className="mt-5 text-base md:text-lg max-w-2xl mx-auto"
               style={{ color: "rgba(255,255,255,0.5)" }}
             >
-              Transparentne cene za Beograd, Pančevo i širom Srbije — bez skrivenih
+              Transparentne cene za Beograd, Pančevo i širom Srbije, bez skrivenih
               troškova. Pogledajte{" "}
               <a
                 href="#gallery"
@@ -251,13 +251,13 @@ export default function Pricing() {
                       Preporuči prijatelju
                     </p>
                     <p className="text-[1.0625rem] font-semibold text-white leading-snug mb-3">
-                      Preporučite nas — oboje štedite
+                      Preporučite nas, oboje štedite
                     </p>
                     <p
                       className="text-[0.9375rem] leading-relaxed"
                       style={{ color: "rgba(255,255,255,0.6)" }}
                     >
-                      Preporučite nas nekome ko zakaže i realizuje događaj — i vi i vaš
+                      Preporučite nas nekome ko zakaže i realizuje događaj, i vi i vaš
                       prijatelj dobijate{" "}
                       <span className="font-bold" style={{ color: "#c9a84c" }}>
                         10% popusta
@@ -279,7 +279,7 @@ export default function Pricing() {
           >
             <Icon name="star" size={22} color="#c9a84c" strokeWidth={1.5} />
             <p className="text-[0.9375rem]" style={{ color: "rgba(255,255,255,0.6)" }}>
-              Termini za letnju sezonu se popunjavaju brzo —{" "}
+              Termini za letnju sezonu se popunjavaju brzo.{" "}
               <a
                 href="#booking"
                 className="font-semibold underline underline-offset-4"

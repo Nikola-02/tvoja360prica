@@ -50,13 +50,13 @@ export default function SeoLandingPage({
                 {section.title}
               </h2>
               {section.image && (
-                <figure className="relative aspect-[16/10] mb-8 overflow-hidden border border-[#c9a84c]/20">
+                <figure className="relative mx-auto mb-8 max-w-[280px] sm:max-w-xs aspect-[9/16] overflow-hidden border border-[#c9a84c]/20">
                   <Image
                     src={section.image.src}
                     alt={section.image.alt}
                     fill
-                    sizes="(max-width: 768px) 100vw, 768px"
-                    className="object-cover"
+                    sizes="(max-width: 768px) 280px, 320px"
+                    className="object-cover object-center"
                     loading="lazy"
                   />
                 </figure>

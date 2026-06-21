@@ -9,7 +9,7 @@ export default function SeoIntro() {
         <ScrollReveal>
           <SectionHeader
             title="360 Video Booth Srbija"
-            description="Premium 360 video iskustvo dostupno u celoj Srbiji — od Beograda i Pančeva do Novog Sada, Niša, Kragujevca i svih manjih gradova."
+            description="Premium 360 video iskustvo dostupno u celoj Srbiji, od Beograda i Pančeva do Novog Sada, Niša, Kragujevca i svih manjih gradova."
           />
         </ScrollReveal>
 

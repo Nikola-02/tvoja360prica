@@ -7,7 +7,7 @@ const events = [
     icon: "heart",
     title: "Venčanja i svadbe",
     description:
-      "Gosti snimaju spektakularne 360 videe tokom proslave — savršen dodatak svadbene zabave.",
+      "Gosti snimaju spektakularne 360 videe tokom proslave, savršen dodatak svadbene zabave.",
   },
   {
     icon: "sparkles",
@@ -19,13 +19,13 @@ const events = [
     icon: "camera",
     title: "Rođendani i jubileji",
     description:
-      "Od prvog rođendana do velikih jubileja — zabavna uspomena za celu porodicu.",
+      "Od prvog rođendana do velikih jubileja, zabavna uspomena za celu porodicu.",
   },
   {
     icon: "user",
     title: "Korporativni eventi",
     description:
-      "Team building, proslave firme i konferencije — brendirani sadržaj koji zaposleni dele.",
+      "Team building, proslave firme i konferencije, brendirani sadržaj koji zaposleni dele.",
   },
 ];
 
@@ -36,7 +36,7 @@ export default function EventsSection() {
         <ScrollReveal>
           <SectionHeader
             title="Za koje događaje je idealan 360 Video Booth"
-            description="360 video booth unosi energiju i interaktivnost na svaku proslavu — od intimnih venčanja do velikih korporativnih događaja."
+            description="360 video booth unosi energiju i interaktivnost na svaku proslavu, od intimnih venčanja do velikih korporativnih događaja."
           />
         </ScrollReveal>
 

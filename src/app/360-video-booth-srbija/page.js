@@ -10,9 +10,9 @@ import {
 import { SITE_URL } from "../../../lib/site";
 
 const path = "/360-video-booth-srbija";
-const title = "360 Video Booth Srbija — Iznajmljivanje";
+const title = "360 Video Booth Srbija | Iznajmljivanje";
 const description =
-  "Premium 360 video booth dostupan širom Srbije — svadbe, punoletstva, korporativni eventi. GoPro Hero 12, rotaciona platforma, instant QR deljenje snimaka.";
+  "Premium 360 video booth dostupan širom Srbije za svadbe, punoletstva i korporativne evente. GoPro Hero 12, rotaciona platforma, instant QR deljenje snimaka.";
 
 export const metadata = buildPageMetadata({
   title,

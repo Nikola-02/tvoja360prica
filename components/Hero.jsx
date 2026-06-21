@@ -1,6 +1,6 @@
-import Image from "next/image";
 import ScrollReveal from "./ScrollReveal";
 import Icon from "./Icon";
+import { HERO_VIDEO } from "../lib/heroMedia";
 
 const stats = [
   { icon: "camera", value: "1000+", label: "Snimljenih videa" },
@@ -13,13 +13,13 @@ export default function Hero() {
   return (
     <>
       <section
-        className="relative min-h-[100svh] flex flex-col justify-end overflow-hidden"
+        id="hero"
+        className="relative min-h-[100svh] flex flex-col justify-end lg:justify-center overflow-hidden"
         style={{ background: "#0a0a0a" }}
       >
-        <div className="relative w-full max-w-7xl mx-auto px-6 pt-32 pb-14 md:pb-20 lg:pt-36 lg:pb-24">
-          <div className="grid lg:grid-cols-12 lg:gap-x-10 xl:gap-x-16 items-end">
-            {/* Tekst — levo, editorial */}
-            <div className="lg:col-span-7 text-left">
+        <div className="relative w-full max-w-7xl mx-auto px-6 pt-32 pb-14 md:pb-20 lg:py-20">
+          <div className="grid lg:grid-cols-12 lg:gap-x-10 xl:gap-x-16 items-end lg:items-center">
+            <div className="lg:col-span-7 text-left lg:translate-y-2">
               <ScrollReveal>
                 <div className="flex items-center gap-5 mb-10 md:mb-14">
                   <span
@@ -84,28 +84,30 @@ export default function Hero() {
               </ScrollReveal>
             </div>
 
-            {/* Slika — desno, okvir editorial stila */}
-            <ScrollReveal delay={120} className="lg:col-span-5 mt-14 lg:mt-0">
-              <div className="relative mx-auto lg:mx-0 lg:ml-auto w-full max-w-[min(72vw,340px)] lg:max-w-none">
+            <ScrollReveal delay={120} className="lg:col-span-5 mt-14 lg:mt-0 lg:-translate-y-2">
+              <figure className="relative mx-auto lg:mx-0 lg:ml-auto w-full max-w-[min(72vw,340px)] lg:max-w-none m-0">
                 <div
                   className="absolute -inset-3 md:-inset-4 pointer-events-none hidden lg:block"
                   style={{ border: "1px solid rgba(255,255,255,0.07)" }}
                   aria-hidden="true"
                 />
                 <div
-                  className="relative aspect-[3/4] overflow-hidden"
-                  style={{
-                    border: "1px solid rgba(255,255,255,0.1)",
-                  }}
+                  className="relative aspect-[3/4] overflow-hidden bg-[#111111]"
+                  style={{ border: "1px solid rgba(255,255,255,0.1)" }}
                 >
-                  <Image
-                    src="/setup/booth-setup.jpg"
-                    alt="360 video booth Beograd svadba — premium rotaciona platforma"
-                    fill
-                    priority
-                    sizes="(max-width: 1024px) 72vw, 42vw"
-                    className="object-cover object-center"
-                  />
+                  <video
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="metadata"
+                    poster={HERO_VIDEO.poster}
+                    title={HERO_VIDEO.title}
+                    aria-label={HERO_VIDEO.ariaLabel}
+                    className="absolute inset-0 h-full w-full object-cover object-center"
+                  >
+                    <source src={HERO_VIDEO.src} type="video/mp4" />
+                  </video>
                   <div
                     className="absolute inset-0 pointer-events-none"
                     style={{
@@ -115,18 +117,15 @@ export default function Hero() {
                     aria-hidden="true"
                   />
                 </div>
-                <p
-                  className="mt-4 hidden lg:block text-[0.6875rem] tracking-[0.18em] uppercase text-white/25"
-                >
+                <figcaption className="mt-4 hidden lg:block text-[0.6875rem] tracking-[0.18em] uppercase text-white/25 lg:text-right">
                   360° · GoPro Hero 12 · Instant share
-                </p>
-              </div>
+                </figcaption>
+              </figure>
             </ScrollReveal>
           </div>
         </div>
       </section>
 
-      {/* Statistike */}
       <div className="border-b border-[#e8e2d4]">
         <ScrollReveal stagger>
           <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-[#e8e2d4] max-w-5xl mx-auto">

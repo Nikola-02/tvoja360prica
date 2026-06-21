@@ -12,7 +12,7 @@ const clientNeeds = [
   {
     icon: "bolt",
     title: "Jedna standardna strujna utičnica",
-    description: "Sve ostalo dolazi sa našom opremom — bez dodatnih zahteva.",
+    description: "Sve ostalo dolazi sa našom opremom, bez dodatnih zahteva.",
   },
 ];
 
@@ -59,7 +59,7 @@ export default function WhatYouNeed() {
           <ScrollReveal>
             <SectionHeader
               title="Sve što je potrebno od vas"
-              description="Minimalni zahtevi — maksimalno iskustvo."
+              description="Minimalni zahtevi, maksimalno iskustvo."
             />
           </ScrollReveal>
 
