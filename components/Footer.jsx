@@ -20,7 +20,7 @@ export default function Footer() {
             Tvoja <span style={{ color: "#c9a84c" }}>360</span> Priča
           </div>
           <p className="mt-2 text-[0.9375rem] text-white/45">
-            360 video booth · Beograd, Pančevo i širom Srbije · od 149€ / 2h
+            360 video booth · Beograd, Pančevo i širom Srbije · od 159€ / 2h
           </p>
           <a
             href="mailto:tvoja360prica.studio@gmail.com"
@@ -44,13 +44,19 @@ export default function Footer() {
         </div>
 
         <nav className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8">
-          <a href="#gallery" className="text-sm text-white/45 hover:text-white transition-colors">
-            Snimci
+          <a href="/360-video-booth-beograd" className="text-sm text-white/45 hover:text-white transition-colors whitespace-nowrap">
+            360 Booth Beograd
           </a>
-          <a href="#booking" className="text-sm text-white/45 hover:text-white transition-colors whitespace-nowrap">
-            Rezervacija
+          <a href="/360-video-booth-srbija" className="text-sm text-white/45 hover:text-white transition-colors whitespace-nowrap">
+            360 Booth Srbija
           </a>
-          <a href="#contact" className="text-sm text-white/45 hover:text-white transition-colors">
+          <a href="/#gallery" className="text-sm text-white/45 hover:text-white transition-colors">
+            Galerija
+          </a>
+          <a href="/#pricing" className="text-sm text-white/45 hover:text-white transition-colors whitespace-nowrap">
+            Cenovnik
+          </a>
+          <a href="/#contact" className="text-sm text-white/45 hover:text-white transition-colors whitespace-nowrap">
             Kontakt
           </a>
         </nav>

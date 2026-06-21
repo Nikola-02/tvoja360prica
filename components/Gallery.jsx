@@ -4,15 +4,15 @@ import SectionHeader from "./SectionHeader";
 const videos = [
   {
     src: "/videos/sample1.mp4",
-    label: "Venčanje — 360 video iskustvo",
+    label: "360 video booth Beograd svadba — venčanje",
   },
   {
     src: "/videos/sample2.mp4",
-    label: "Rođendan — video booth Srbija",
+    label: "360 video booth Srbija punoletstvo — rođendan",
   },
   {
     src: "/videos/sample3.mp4",
-    label: "Korporativni događaj — 360 snimanje",
+    label: "360 video booth korporativni događaj — 360 snimanje",
   },
 ];
 
@@ -22,8 +22,21 @@ export default function Gallery() {
       <div className="max-w-6xl mx-auto px-6">
         <ScrollReveal>
           <SectionHeader
-            title="Pogledajte magiju u pokretu"
-            description="Pravi snimci sa venčanja, rođendana i proslava širom Srbije. Gosti odlaze sa video uspomenom u ruci odmah nakon snimanja."
+            title="Galerija — 360 video snimci"
+            description={
+              <>
+                Pravi snimci sa venčanja, rođendana i proslava širom Srbije. Gosti
+                odlaze sa video uspomenom u ruci odmah nakon snimanja. Pogledajte{" "}
+                <a href="#pricing" className="font-semibold text-[#c9a84c] hover:underline">
+                  cenovnik
+                </a>{" "}
+                ili nas{" "}
+                <a href="#contact" className="font-semibold text-[#c9a84c] hover:underline">
+                  kontaktirajte
+                </a>{" "}
+                za ponudu.
+              </>
+            }
           />
         </ScrollReveal>
 

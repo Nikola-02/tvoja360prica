@@ -13,7 +13,7 @@ export default function About() {
     <section id="about" className="section-padding">
       <div className="max-w-3xl mx-auto px-6">
         <ScrollReveal>
-          <SectionHeader title="Vaš partner za nezaboravne trenutke" />
+          <SectionHeader title="Zašto odabrati naš 360 Video Booth" />
         </ScrollReveal>
 
         <ScrollReveal>

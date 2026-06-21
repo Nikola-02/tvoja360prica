@@ -5,26 +5,26 @@ import SectionHeader from "./SectionHeader";
 const setupImages = [
   {
     src: "/setup/booth-setup.jpg",
-    alt: "360 video booth setup sa platformom i profesionalnim osvetljenjem",
+    alt: "360 video booth Beograd svadba — platforma i osvetljenje",
     title: "360 platforma i osvetljenje",
     offset: "lg:-translate-y-3",
   },
   {
     src: "/setup/booth-setup2.jpeg",
-    alt: "Profesionalni 360 booth setup na događaju",
+    alt: "360 video booth Srbija punoletstvo — profesionalni setup",
     title: "Profesionalni setup",
     offset: "lg:translate-y-10",
     objectPosition: "60% center",
   },
   {
     src: "/setup/booth-setup3.jpeg",
-    alt: "360 video booth oprema spremna za snimanje na proslavi",
+    alt: "360 video booth Beograd rođendan — oprema za snimanje",
     title: "Oprema za snimanje",
     offset: "lg:translate-y-5",
   },
   {
     src: "/setup/booth-setup4.jpeg",
-    alt: "Kompletan 360 video booth setup za venčanja i proslave",
+    alt: "360 video booth korporativni događaj — kompletan setup",
     title: "Kompletan booth setup",
     offset: "lg:translate-y-12",
   },
@@ -36,8 +36,8 @@ export default function SetupGallery() {
       <div className="max-w-6xl mx-auto px-6">
         <ScrollReveal>
           <SectionHeader
-            title="Kako izgleda 360 booth setup"
-            description="Profesionalna platforma, pažljivo osvetljenje i setup koji se uklapa u svaki događaj, od intimnih venčanja do grandioznih proslava."
+            title="Kako funkcioniše 360 Video Booth"
+            description="Profesionalna platforma, pažljivo osvetljenje i setup koji se uklapa u svaki događaj — od intimnih venčanja do grandioznih proslava."
           />
         </ScrollReveal>
 

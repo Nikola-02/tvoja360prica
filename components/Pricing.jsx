@@ -1,7 +1,7 @@
 import ScrollReveal from "./ScrollReveal";
 import Icon from "./Icon";
 
-const BASE_PRICE = 149;
+const BASE_PRICE = 159;
 const EXTRA_HOUR = 40;
 const OLD_PRICE_MARKUP = 1.35;
 
@@ -48,14 +48,30 @@ export default function Pricing() {
           <div className="text-center mb-14">
             <div className="gold-line mb-6" />
             <h2 className="heading text-[2rem] md:text-[2.75rem] text-white">
-              Cenovnik — Tvoja 360 Priča
+              Cenovnik — 360 Video Booth
             </h2>
             <p
               className="mt-5 text-base md:text-lg max-w-2xl mx-auto"
               style={{ color: "rgba(255,255,255,0.5)" }}
             >
-              Transparentne cene za Beograd, Pančevo i širom Srbije — bez
-              skrivenih troškova.
+              Transparentne cene za Beograd, Pančevo i širom Srbije — bez skrivenih
+              troškova. Pogledajte{" "}
+              <a
+                href="#gallery"
+                className="font-semibold underline underline-offset-4"
+                style={{ color: "#c9a84c" }}
+              >
+                galeriju
+              </a>{" "}
+              ili nas{" "}
+              <a
+                href="#contact"
+                className="font-semibold underline underline-offset-4"
+                style={{ color: "#c9a84c" }}
+              >
+                kontaktirajte
+              </a>{" "}
+              za ponudu.
             </p>
           </div>
         </ScrollReveal>

@@ -45,8 +45,8 @@ export default function ContactForm() {
       <div className="max-w-2xl mx-auto px-6">
         <ScrollReveal>
           <SectionHeader
-            title="Imate pitanje? Pišite nam"
-            description="Tu smo da odgovorimo na sva vaša pitanja o 360 video booth usluzi."
+            title="Kontakt — imate pitanje?"
+            description="Tu smo da odgovorimo na sva vaša pitanja o 360 video booth usluzi. Pogledajte i naš cenovnik ili galeriju snimaka."
           />
         </ScrollReveal>
 
