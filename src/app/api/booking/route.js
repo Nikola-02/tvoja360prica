@@ -8,13 +8,13 @@ import {
 export async function POST(request) {
   try {
     const body = await request.json();
-    const { name, phone, email, social, date, eventType, startTime, hours } = body;
+    const { name, phone, email, social, date, eventType, location, startTime, hours } = body;
 
-    if (!name || !phone || !email || !date || !eventType || !startTime || !hours) {
+    if (!name || !phone || !email || !date || !eventType || !location || !startTime || !hours) {
       return NextResponse.json({ error: "Nedostaju obavezna polja" }, { status: 400 });
     }
 
-    const data = { name, phone, email, social, date, eventType, startTime, hours };
+    const data = { name, phone, email, social, date, eventType, location, startTime, hours };
 
     const ownerResult = await sendEmail({
       to: OWNER_EMAIL,

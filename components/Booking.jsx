@@ -7,6 +7,7 @@ import SectionHeader from "./SectionHeader";
 const eventTypes = [
   "Venčanje",
   "Rođendan",
+  "Punoletstvo",
   "Matura",
   "Korporativni događaj",
   "Proslava",
@@ -26,6 +27,7 @@ const initialForm = {
   social: "",
   date: "",
   eventType: "",
+  location: "",
   startTime: "",
   hours: "",
 };
@@ -163,6 +165,19 @@ export default function Booking() {
                     </option>
                   ))}
                 </select>
+              </div>
+
+              <div className="sm:col-span-2">
+                <label className="block text-[0.9375rem] font-semibold text-[#111111]/80 mb-1.5">
+                  Mesto održavanja *
+                </label>
+                <input
+                  required
+                  value={form.location}
+                  onChange={update("location")}
+                  className="input-premium"
+                  placeholder="grad ili mesto održavanja"
+                />
               </div>
 
               <div>
