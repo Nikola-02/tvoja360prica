@@ -36,7 +36,7 @@ export default function EventsSection() {
         <ScrollReveal>
           <SectionHeader
             title="Za koje događaje je idealan 360 Video Booth"
-            description="360 video booth unosi energiju i interaktivnost na svaku proslavu, od intimnih venčanja do velikih korporativnih događaja."
+            description="360 video booth i 360 photo booth unose energiju na svaku proslavu, od intimnih venčanja do velikih korporativnih događaja."
           />
         </ScrollReveal>
 

@@ -2,6 +2,7 @@ import { Plus_Jakarta_Sans, Fraunces } from "next/font/google";
 import "./globals.css";
 import Header from "../../components/Header";
 import PromoPopup from "../../components/PromoPopup";
+import CallButton from "../../components/CallButton";
 import {
   HOME_DESCRIPTION,
   HOME_TITLE,
@@ -73,6 +74,7 @@ export default function RootLayout({ children }) {
       >
         <Header />
         <PromoPopup />
+        <CallButton />
         <main className="min-h-screen">{children}</main>
       </body>
     </html>

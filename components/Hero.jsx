@@ -55,8 +55,9 @@ export default function Hero() {
                   className="mt-7 md:mt-9 text-[1rem] md:text-[1.0625rem] max-w-[28rem] leading-[1.75] font-normal"
                   style={{ color: "rgba(255,255,255,0.48)" }}
                 >
-                  Premium 360 video iskustvo za svadbe, punoletstva i korporativne
-                  događaje. Gosti dobijaju svoje videe odmah, a uspomene ostaju zauvek.
+                  Premium 360 video booth i 360 photo booth iskustvo za svadbe,
+                  punoletstva i korporativne događaje. Gosti dobijaju svoje videe
+                  odmah, a uspomene ostaju zauvek.
                 </p>
               </ScrollReveal>
 

@@ -47,7 +47,7 @@ export default function PromoPopup() {
       role="dialog"
       aria-modal="false"
       aria-labelledby="promo-title"
-      className={`fixed z-[70] bottom-4 right-4 left-4 sm:left-auto sm:max-w-[19rem] transition-all duration-300 ${
+      className={`fixed z-[70] bottom-24 right-4 left-4 sm:left-auto sm:max-w-[19rem] transition-all duration-300 ${
         active ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3 pointer-events-none"
       }`}
     >

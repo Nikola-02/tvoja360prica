@@ -53,6 +53,47 @@ export default function SeoIntro() {
             </p>
           </article>
         </ScrollReveal>
+
+        <ScrollReveal>
+          <div className="mt-16 text-center">
+            <div className="gold-line mb-6" />
+            <h2 className="heading text-[1.75rem] md:text-[2.25rem] text-[#0f0f0f]">
+              360 Photo Booth Beograd
+            </h2>
+            <p className="mt-5 body-lg text-base md:text-lg max-w-xl mx-auto">
+              Tražite 360 photo booth, 360 photobooth ili 360 photo? To smo mi,
+              moderna 360 video verzija platforme.
+            </p>
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal>
+          <article className="mt-6 space-y-5 text-[1.0625rem] leading-[1.8] text-[#0f0f0f]/65 text-center">
+            <p>
+              Mnogi gosti i organizatori događaja u Beogradu i Srbiji traže{" "}
+              <strong className="text-[#0f0f0f]">360 photo booth</strong>,{" "}
+              <strong className="text-[#0f0f0f]">360 photobooth</strong> ili{" "}
+              <strong className="text-[#0f0f0f]">360 photo</strong>. U praksi je
+              reč o istoj rotacionoj platformi koja snima spektakularne
+              slow-motion videe, a ne samo klasične fotografije. Kod nas dobijate
+              premium 360 video booth iskustvo: GoPro Hero 12, profesionalnu
+              rasvetu, rekvizite i instant QR kod za deljenje snimaka.
+            </p>
+            <p>
+              Ako ste googlovali 360 photo booth Beograd ili 360 photobooth za
+              venčanje, punoletstvo ili korporativni event, na pravom ste mestu.
+              Pogledajte{" "}
+              <a href="#pricing" className="font-semibold text-[#c9a84c] hover:underline">
+                cenovnik
+              </a>{" "}
+              i{" "}
+              <a href="#booking" className="font-semibold text-[#c9a84c] hover:underline">
+                proverite slobodan termin
+              </a>
+              .
+            </p>
+          </article>
+        </ScrollReveal>
       </div>
     </section>
   );

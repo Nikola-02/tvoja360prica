@@ -10,9 +10,9 @@ import {
 import { SITE_URL } from "../../../lib/site";
 
 const path = "/360-video-booth-beograd";
-const title = "360 Video Booth Beograd | Iznajmljivanje";
+const title = "360 Video Booth Beograd | 360 Photo Booth";
 const description =
-  "Iznajmljivanje premium 360 video booth platforme u Beogradu za svadbe, punoletstva i korporativne događaje. GoPro Hero 12, instant QR videi, besplatna dostava.";
+  "360 video booth i 360 photo booth u Beogradu za svadbe, punoletstva i evente. GoPro Hero 12, instant QR videi, besplatna dostava.";
 
 export const metadata = buildPageMetadata({
   title,
@@ -20,7 +20,11 @@ export const metadata = buildPageMetadata({
   path,
   keywords: [
     "360 video booth Beograd",
+    "360 photo booth Beograd",
+    "360 photobooth Beograd",
+    "360 photo Beograd",
     "iznajmljivanje 360 video booth Beograd",
+    "iznajmljivanje 360 photo booth Beograd",
     "360 platforma Beograd",
     "360 video svadba Beograd",
     "360 booth punoletstvo Beograd",
