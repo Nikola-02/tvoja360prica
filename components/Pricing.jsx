@@ -1,8 +1,8 @@
 import ScrollReveal from "./ScrollReveal";
 import Icon from "./Icon";
 
-const BASE_PRICE = 159;
-const EXTRA_HOUR = 40;
+const BASE_PRICE = 179;
+const EXTRA_HOUR = 50;
 const OLD_PRICE_MARKUP = 1.35;
 
 function oldPriceFrom(price) {
