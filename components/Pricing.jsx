@@ -15,7 +15,7 @@ function formatDuration(h) {
   return `${h} sati`;
 }
 
-const hours = [2, 3, 4].map((h) => {
+const hours = [2, 3, 4, 5].map((h) => {
   const price = BASE_PRICE + (h - 2) * EXTRA_HOUR;
   return {
     h,
@@ -23,6 +23,7 @@ const hours = [2, 3, 4].map((h) => {
     price,
     oldPrice: oldPriceFrom(price),
     popular: h === 3,
+    freeDeliverySerbia: h === 5,
   };
 });
 
@@ -30,7 +31,8 @@ const included = [
   "Najnovija GoPro Hero 12 Black kamera (skoro 6K, stabilizovan video)",
   "Velika platforma od 100 cm prečnika (za do 4 osobe istovremeno)",
   "Unikatni i jedinstveni rekviziti uključeni u cenu",
-  "Besplatna dostava i montaža u Beogradu i Pančevu · dostupno širom Srbije",
+  "Besplatna dostava i montaža u Beogradu i Pančevu",
+  "Uz 5 sati, besplatna dostava širom Srbije",
   "Instant preuzimanje snimaka putem QR koda",
   "Naš tim vodi ceo događaj. Vi se opuštate, mi radimo",
 ];
@@ -91,82 +93,108 @@ export default function Pricing() {
               </p>
 
               <div className="space-y-3 flex-1">
-                {hours.map(({ h, label, price, oldPrice, popular }) => (
-                  <div
-                    key={h}
-                    className="py-4 px-5"
-                    style={{
-                      background: popular ? "rgba(201,168,76,0.10)" : "transparent",
-                      border: popular
-                        ? "1px solid rgba(201,168,76,0.3)"
-                        : "1px solid rgba(255,255,255,0.07)",
-                      borderRadius: "3px",
-                    }}
-                  >
-                    <div className="flex items-start sm:items-center justify-between gap-3 w-full">
-                      <div
-                        className={
-                          popular
-                            ? "flex flex-col items-start gap-1.5 min-w-0 sm:flex-row sm:items-center sm:gap-3"
-                            : "flex items-center gap-2 min-w-0"
-                        }
-                      >
-                        <div className="flex items-center gap-2 shrink-0">
-                          <Icon
-                            name="clock"
-                            size={18}
-                            color={popular ? "#c9a84c" : "rgba(255,255,255,0.4)"}
-                            strokeWidth={1.5}
-                          />
+                {hours.map(({ h, label, price, oldPrice, popular, freeDeliverySerbia }) => {
+                  const highlight = popular || freeDeliverySerbia;
+                  return (
+                    <div
+                      key={h}
+                      className="py-4 px-5"
+                      style={{
+                        background: highlight ? "rgba(201,168,76,0.10)" : "transparent",
+                        border: highlight
+                          ? "1px solid rgba(201,168,76,0.3)"
+                          : "1px solid rgba(255,255,255,0.07)",
+                        borderRadius: "3px",
+                      }}
+                    >
+                      <div className="flex items-start sm:items-center justify-between gap-3 w-full">
+                        <div
+                          className={
+                            highlight
+                              ? "flex flex-col items-start gap-1.5 min-w-0 sm:flex-row sm:items-center sm:gap-3"
+                              : "flex items-center gap-2 min-w-0"
+                          }
+                        >
+                          <div className="flex items-center gap-2 shrink-0">
+                            <Icon
+                              name="clock"
+                              size={18}
+                              color={highlight ? "#c9a84c" : "rgba(255,255,255,0.4)"}
+                              strokeWidth={1.5}
+                            />
+                            <span
+                              className="font-semibold text-[1.0625rem] whitespace-nowrap"
+                              style={{ color: highlight ? "#c9a84c" : "rgba(255,255,255,0.75)" }}
+                            >
+                              {label}
+                            </span>
+                          </div>
+                          {popular && (
+                            <span
+                              className="text-[0.65rem] sm:text-[0.7rem] font-bold tracking-wider uppercase px-2 py-0.5 whitespace-nowrap shrink-0"
+                              style={{ background: "#c9a84c", color: "#0f0f0f", borderRadius: "2px" }}
+                            >
+                              Popularno
+                            </span>
+                          )}
+                          {freeDeliverySerbia && (
+                            <span
+                              className="text-[0.65rem] sm:text-[0.7rem] font-bold tracking-wider uppercase px-2 py-0.5 whitespace-nowrap shrink-0"
+                              style={{ background: "#c9a84c", color: "#0f0f0f", borderRadius: "2px" }}
+                            >
+                              Gratis dostava
+                            </span>
+                          )}
+                        </div>
+                        <div className="flex flex-col items-end gap-0.5 shrink-0">
                           <span
-                            className="font-semibold text-[1.0625rem] whitespace-nowrap"
-                            style={{ color: popular ? "#c9a84c" : "rgba(255,255,255,0.75)" }}
+                            className="text-sm line-through decoration-white/25"
+                            style={{ color: "rgba(255,255,255,0.35)" }}
                           >
-                            {label}
+                            {oldPrice} €
+                          </span>
+                          <span
+                            className="heading-serif text-2xl leading-none"
+                            style={{ color: highlight ? "#c9a84c" : "rgba(255,255,255,0.9)" }}
+                          >
+                            {price} €
                           </span>
                         </div>
-                        {popular && (
-                          <span
-                            className="text-[0.65rem] sm:text-[0.7rem] font-bold tracking-wider uppercase px-2 py-0.5 whitespace-nowrap shrink-0"
-                            style={{ background: "#c9a84c", color: "#0f0f0f", borderRadius: "2px" }}
-                          >
-                            Popularno
+                      </div>
+                      {popular && (
+                        <p
+                          className="mt-3 pt-3 text-xs leading-relaxed border-t"
+                          style={{
+                            color: "rgba(255,255,255,0.5)",
+                            borderColor: "rgba(201,168,76,0.2)",
+                          }}
+                        >
+                          Najpovoljniji paket na tržištu. Više od{" "}
+                          <span className="font-semibold" style={{ color: "#c9a84c" }}>
+                            50+ klijenata
+                          </span>{" "}
+                          već je izabralo ovaj paket. Najčešći izbor za venčanja,
+                          punoletstva i proslave.
+                        </p>
+                      )}
+                      {freeDeliverySerbia && (
+                        <p
+                          className="mt-3 pt-3 text-xs leading-relaxed border-t"
+                          style={{
+                            color: "rgba(255,255,255,0.5)",
+                            borderColor: "rgba(201,168,76,0.2)",
+                          }}
+                        >
+                          Uz ovaj paket{" "}
+                          <span className="font-semibold" style={{ color: "#c9a84c" }}>
+                            dostava je besplatna širom Srbije
                           </span>
-                        )}
-                      </div>
-                      <div className="flex flex-col items-end gap-0.5 shrink-0">
-                        <span
-                          className="text-sm line-through decoration-white/25"
-                          style={{ color: "rgba(255,255,255,0.35)" }}
-                        >
-                          {oldPrice} €
-                        </span>
-                        <span
-                          className="heading-serif text-2xl leading-none"
-                          style={{ color: popular ? "#c9a84c" : "rgba(255,255,255,0.9)" }}
-                        >
-                          {price} €
-                        </span>
-                      </div>
+                          .
+                        </p>
+                      )}
                     </div>
-                    {popular && (
-                      <p
-                        className="mt-3 pt-3 text-xs leading-relaxed border-t"
-                        style={{
-                          color: "rgba(255,255,255,0.5)",
-                          borderColor: "rgba(201,168,76,0.2)",
-                        }}
-                      >
-                        Najpovolniji paket na tržištu. Više od{" "}
-                        <span className="font-semibold" style={{ color: "#c9a84c" }}>
-                          50+ klijenata
-                        </span>{" "}
-                        već je izabralo ovaj paket. Najčešći izbor za venčanja,
-                        punoletstva i proslave.
-                      </p>
-                    )}
-                  </div>
-                ))}
+                  );
+                })}
               </div>
 
               <p className="mt-5 text-sm" style={{ color: "rgba(255,255,255,0.4)" }}>
@@ -189,8 +217,12 @@ export default function Pricing() {
                 <span className="font-bold" style={{ color: "#c9a84c" }}>
                   besplatni
                 </span>
-                . Iznajmljivanje dostupno i na događajima{" "}
-                <span className="font-semibold text-white">širom Srbije</span>.
+                . Uz paket od{" "}
+                <span className="font-semibold text-white">5 sati</span>, dostava je{" "}
+                <span className="font-bold" style={{ color: "#c9a84c" }}>
+                  besplatna širom Srbije
+                </span>
+                .
               </p>
 
               <a

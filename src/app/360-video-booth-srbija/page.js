@@ -12,7 +12,7 @@ import { SITE_URL } from "../../../lib/site";
 const path = "/360-video-booth-srbija";
 const title = "360 Video Booth Srbija | 360 Photo Booth";
 const description =
-  "360 video booth i 360 photo booth širom Srbije za svadbe, punoletstva i korporativne evente. Od 179€ / 2h, svaki naredni sat +50€. GoPro Hero 12, instant QR.";
+  "360 video booth i 360 photo booth širom Srbije za svadbe, punoletstva i korporativne evente. Od 179€ / 2h. Uz 5 sati, besplatna dostava širom Srbije.";
 
 export const metadata = buildPageMetadata({
   title,
